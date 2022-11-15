@@ -1,4 +1,4 @@
-package com.marlena.beauty_school;
+package com.marlena.beautyschool;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

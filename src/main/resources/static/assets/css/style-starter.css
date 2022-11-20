@@ -28,3 +28,11 @@ h1 {
 .home-info {
     text-align: justify;
 }
+
+.bi-book, .bi-cup-hot, .bi-laptop, .bi-calendar4-week, .bi-patch-check {
+    font-size: 4rem;
+}
+
+.bold {
+    font-weight: bold;
+}

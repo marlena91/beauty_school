@@ -25,7 +25,7 @@ h1 {
     font-weight: bold;
 }
 
-.home-info {
+.justify {
     text-align: justify;
 }
 
@@ -35,4 +35,42 @@ h1 {
 
 .bold {
     font-weight: bold;
+}
+
+.c-p {
+    background-image: url("/assets/images/contact.jpg");
+    padding: 0;
+    /*border-radius: 5px;*/
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.small {
+    font-size: smaller;
+}
+
+.dusty-rose {
+    color: #F8AFA6;
+}
+
+.coral {
+    color: #F79489;
+}
+
+.bg-cream {
+    background-color: #F9F1F0;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover{
+    color: #F79489;
 }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beauty School - Courses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+<body>
+<div th:replace="header :: header"></div>
+<div class="ms-3 mt-3">
+    <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/home}" class="link coral">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About us</li>
+        </ol>
+    </div>
+</div>
+<section>
+    <div class="container text-center">
+        <div class="row mt-5 mb-3">
+            <div class="col">
+                <h2 class="bold coral">Our teachers</h2>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <div class="row fill">
+                    <img src="assets/images/teacher1.jpg" class="img-fluid position-relative" alt=" ">
+                </div>
+                <div class="row">
+                    <p>Weronika</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row fill">
+                    <img src="assets/images/teacher2.jpg" class="img-fluid position-relative" alt=" ">
+                </div>
+                <div class="row">
+                    <p>Anastazja</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row fill">
+                    <img src="assets/images/teacher3.jpg" class="img-fluid position-relative" alt=" ">
+                </div>
+                <div class="row">
+                    <p>Kasia</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row fill">
+                    <img src="assets/images/teacher4.jpg" class="img-fluid position-relative" alt=" ">
+                </div>
+                <div class="row">
+                    <p>Zuza</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row fill">
+                    <img src="assets/images/teacher5.jpg" class="img-fluid position-relative" alt=" ">
+                </div>
+                <div class="row">
+                    <p>Kamila</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p class="right"><a href="#" class="coral link">And others...</a></p>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container text-center">
+        <div class="row mt-5">
+            <div class="col">
+                <h3 class="bold coral">Cras in tortor mollis, mattis enim non, ullamcorper dui</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m-5 p-3">
+                <p class="justify">Cras mollis, lorem sed fermentum dapibus, metus nisi malesuada justo, vel mollis arcu
+                    turpis vitae
+                    sem. Donec lobortis euismod gravida. Sed maximus augue at dolor suscipit, sed porttitor odio
+                    imperdiet. Cras ut luctus odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                    per inceptos himenaeos. Praesent pellentesque ligula non gravida tempor. Aenean id tristique justo.
+                    Etiam efficitur neque dolor, non venenatis leo pharetra vitae. Quisque elit diam, finibus ac
+                    ultricies in, volutpat eget tortor. Cras et maximus elit.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container text-center mb-5">
+        <div class="row mt-5">
+            <div class="col mb-5">
+                <h2 class="bold coral">Opinions</h2>
+            </div>
+        </div>
+        <div class="row mb-5 pb-5">
+            <div class="col">
+                <div class="row">
+                    <h4>Title</h4>
+                    <p>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </p>
+                </div>
+                <div class="row justify m-3">Pellentesque placerat nulla porttitor malesuada tristique. Morbi in consectetur
+                    massa. Curabitur eu maximus magna. Pellentesque tincidunt pretium elit.
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <h4>Title</h4>
+                    <p>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </p>
+                </div>
+                <div class="row justify m-3">Fusce semper nunc sed augue commodo fermentum. Cras urna neque, dictum ut
+                    mauris sed, finibus vehicula magna.
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <h4>Title</h4>
+                    <p>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </p>
+                </div>
+                <div class="row justify m-3">
+                    In scelerisque massa quis convallis accumsan. Nullam tempor sit amet magna in
+                    varius. Ut tempus tortor sit amet scelerisque mattis. Nullam vulputate pulvinar pretium.
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <h4>Title</h4>
+                    <p>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </p>
+                </div>
+                <div class="row justify m-3">Vestibulum bibendum pulvinar lorem, non commodo odio ultricies vel. Phasellus
+                    nec elit sagittis, finibus metus sed, semper augue. Vestibulum elementum ipsum et nulla
+                    varius congue.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<div th:replace="footer :: footer"></div>
+
+</body>
+</html>

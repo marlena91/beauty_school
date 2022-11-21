@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Quicksand', serif;
-    font-size: 1rem;
+    font-size: 16px;
     color: #2C2C20;
     background-color: #F9F1F0;
     min-height: 100vh;
@@ -73,4 +73,14 @@ h1 {
 
 .link:hover{
     color: #F79489;
+}
+
+.fill {
+    width: 264px;
+    height: 313px;
+}
+
+.fill img {
+    object-fit: cover;
+    height: 100%;
 }

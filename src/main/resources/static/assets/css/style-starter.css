@@ -40,7 +40,6 @@ h1 {
 .c-p {
     background-image: url("/assets/images/contact.jpg");
     padding: 0;
-    /*border-radius: 5px;*/
 }
 
 .left {
@@ -83,4 +82,13 @@ h1 {
 .fill img {
     object-fit: cover;
     height: 100%;
+}
+
+input, textarea {
+    border-color: #F8AFA6;
+    height: 2.5rem;
+}
+
+textarea {
+    height: 5rem;
 }

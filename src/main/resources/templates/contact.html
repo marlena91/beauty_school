@@ -29,34 +29,36 @@
         </div>
         <div class="row">
             <div class="col-7">
-                <div class="row">
-                    <div class="col-6">
-                        <input class="w-100 me-2" type="text" id="fname" placeholder="Your Name">
+                <form th:action="@{/saveMsg}" method="post">
+                    <div class="row">
+                        <div class="col-6">
+                            <input class="w-100 me-2" type="text" id="name" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="col-6">
+                            <input class="w-100" type="text" id="phone" name="phone" placeholder="Your Mobile Number">
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <input class="w-100" type="text" id="phone" placeholder="Your Mobile Number">
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <input class="w-100" type="text" id="email" name="email" placeholder="Your Email">
+                        </div>
                     </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-12">
-                        <input class="w-100" type="text" id="email" placeholder="Your Email">
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <input class="w-100" type="text" id="subject" name="subject" placeholder="Subject">
+                        </div>
                     </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-12">
-                        <input class="w-100" type="text" id="subject" placeholder="Subject">
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <textarea class="w-100" id="message" name="message" placeholder="Type your message here..."></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-12">
-                        <textarea class="w-100" id="message" placeholder="Type your message here..."></textarea>
+                    <div class="row mt-2">
+                        <div class="col d-flex justify-content-end align-items-end">
+                            <button type="submit" class="btn btn-sm btn-outline-dark me-2">Send message</button>
+                        </div>
                     </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col d-flex justify-content-end align-items-end">
-                        <button type="button" class="btn btn-sm btn-outline-dark me-2">Send message</button>
-                    </div>
-                </div>
+                </form>
             </div>
             <div class="col-5 p-5">
                 <p class="bold">Join us today!</p>

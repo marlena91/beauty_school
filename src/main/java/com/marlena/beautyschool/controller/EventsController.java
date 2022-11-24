@@ -4,6 +4,7 @@ import com.marlena.beautyschool.model.Event;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,7 +14,11 @@ import java.util.stream.Collectors;
 public class EventsController {
 
     @GetMapping("/events")
-    public String displayEvents(Model model) {
+    public String displayEvents(@RequestParam(required = false) boolean local,
+                                @RequestParam(required = false) boolean online,Model model) {
+        model.addAttribute("local", local);
+        model.addAttribute("online", online);
+
         List<Event> events = Arrays.asList(
                 new Event(" 26 November ", "Meeting with the make-up artist, Hamburg", Event.Type.LOCAL),
                 new Event(" 27 November ", "10 questions to... monthly meeting with professionals", Event.Type.ONLINE),

@@ -29,28 +29,33 @@
         </div>
         <div class="row">
             <div class="col-7">
-                <form th:action="@{/saveMsg}" method="post">
+                <ul>
+                    <li class="alert alert-danger" role="alert" th:each="error : ${#fields.errors('contact.*')}"
+                        th:text="${error}"/>
+                </ul>
+                <form th:action="@{/saveMsg}" method="post" th:object="${contact}">
                     <div class="row">
                         <div class="col-6">
-                            <input class="w-100 me-2" type="text" id="name" name="name" placeholder="Your Name">
+                            <input class="w-100 me-2" type="text" th:field="*{name}" placeholder="Your Name">
                         </div>
                         <div class="col-6">
-                            <input class="w-100" type="text" id="phone" name="phone" placeholder="Your Mobile Number">
+                            <input class="w-100" type="text" th:field="*{phone}" placeholder="Your Mobile Number">
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-12">
-                            <input class="w-100" type="text" id="email" name="email" placeholder="Your Email">
+                            <input class="w-100" type="text" th:field="*{email}" placeholder="Your Email">
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-12">
-                            <input class="w-100" type="text" id="subject" name="subject" placeholder="Subject">
+                            <input class="w-100" type="text" th:field="*{subject}" placeholder="Subject">
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-12">
-                            <textarea class="w-100" id="message" name="message" placeholder="Type your message here..."></textarea>
+                            <textarea class="w-100" th:field="*{message}"
+                                      placeholder="Type your message here..."></textarea>
                         </div>
                     </div>
                     <div class="row mt-2">

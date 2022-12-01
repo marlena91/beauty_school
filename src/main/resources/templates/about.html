@@ -12,14 +12,16 @@
 </head>
 <body>
 <div th:replace="header :: header"></div>
-<div class="ms-3 mt-3">
-    <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a th:href="@{/home}" class="link coral">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">About us</li>
-        </ol>
+<section>
+    <div class="ms-3 mt-3">
+        <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a th:href="@{/home}" class="link coral">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About us</li>
+            </ol>
+        </div>
     </div>
-</div>
+</section>
 <section>
     <div class="container text-center">
         <div class="row mt-5 mb-3">
@@ -113,7 +115,8 @@
                         <i class="bi bi-star-fill"></i>
                     </p>
                 </div>
-                <div class="row justify m-3">Pellentesque placerat nulla porttitor malesuada tristique. Morbi in consectetur
+                <div class="row justify m-3">Pellentesque placerat nulla porttitor malesuada tristique. Morbi in
+                    consectetur
                     massa. Curabitur eu maximus magna. Pellentesque tincidunt pretium elit.
                 </div>
             </div>
@@ -159,7 +162,8 @@
                         <i class="bi bi-star-fill"></i>
                     </p>
                 </div>
-                <div class="row justify m-3">Vestibulum bibendum pulvinar lorem, non commodo odio ultricies vel. Phasellus
+                <div class="row justify m-3">Vestibulum bibendum pulvinar lorem, non commodo odio ultricies vel.
+                    Phasellus
                     nec elit sagittis, finibus metus sed, semper augue. Vestibulum elementum ipsum et nulla
                     varius congue.
                 </div>

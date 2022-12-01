@@ -12,14 +12,16 @@
 </head>
 <body>
 <div th:replace="header :: header"></div>
-<div class="ms-3 mt-3">
-    <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a th:href="@{/home}" class="link coral">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Courses</li>
-        </ol>
+<section>
+    <div class="ms-3 mt-3">
+        <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a th:href="@{/home}" class="link coral">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Courses</li>
+            </ol>
+        </div>
     </div>
-</div>
+</section>
 <section>
     <div class="container text-center mt-5 mb-5 p-1">
         <div class="row row-cols-4">
@@ -27,7 +29,8 @@
                 <div class="row fill-c">
                     <img class="course-img" src="/assets/images/photography_course.jpg" alt="">
                 </div>
-                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Photography for beginners</h5></a>
+                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Photography for beginners</h5>
+                </a>
                 </div>
                 <div class="row"><p>Ilina De Veen</p></div>
                 <div class="row">
@@ -39,13 +42,15 @@
                         <i class="bi bi-star-fill"></i>
                     </p>
                 </div>
-                <div class="row"><p>Duis a ligula dignissim, efficitur velit vel, dapibus urna. Ut sit amet aliquam dolor, eget aliquam leo.</p></div>
+                <div class="row"><p>Duis a ligula dignissim, efficitur velit vel, dapibus urna. Ut sit amet aliquam
+                    dolor, eget aliquam leo.</p></div>
             </div>
             <div class="col p-1 mt-2">
                 <div class="row fill-c">
                     <img class="course-img" src="/assets/images/contouring_course.jpg" alt="">
                 </div>
-                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Perfect face contouring</h5></a>
+                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Perfect face contouring</h5>
+                </a>
                 </div>
                 <div class="row"><p>Lilibeth Jonsson</p></div>
                 <div class="row">
@@ -57,7 +62,8 @@
                         <i class="bi bi-star-half"></i>
                     </p>
                 </div>
-                <div class="row"><p>Quisque sodales, turpis finibus dapibus venenatis, dui nisl fermentum sapien, in ultrices ipsum mi ac augue. Nunc viverra aliquet risus finibus pulvinar.</p></div>
+                <div class="row"><p>Quisque sodales, turpis finibus dapibus venenatis, dui nisl fermentum sapien, in
+                    ultrices ipsum mi ac augue. Nunc viverra aliquet risus finibus pulvinar.</p></div>
             </div>
             <div class="col p-1 mt-2">
                 <div class="row fill-c">
@@ -75,13 +81,15 @@
                         <i class="bi bi-star-fill"></i>
                     </p>
                 </div>
-                <div class="row"><p>Proin bibendum congue eros eu dignissim. Mauris vulputate vel justo sit amet volutpat. </p></div>
+                <div class="row"><p>Proin bibendum congue eros eu dignissim. Mauris vulputate vel justo sit amet
+                    volutpat. </p></div>
             </div>
             <div class="col p-1 mt-2">
                 <div class="row fill-c">
                     <img class="course-img" src="/assets/images/cosmetology_course.jpg" alt="">
                 </div>
-                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Basic issues in cosmetology</h5></a>
+                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Basic issues in
+                    cosmetology</h5></a>
                 </div>
                 <div class="row"><p>Ester Aston</p></div>
                 <div class="row">
@@ -93,13 +101,15 @@
                         <i class="bi bi-star-fill"></i>
                     </p>
                 </div>
-                <div class="row"><p>Sed turpis purus, interdum eget gravida a, accumsan eget turpis. Etiam ac bibendum quam.</p></div>
+                <div class="row"><p>Sed turpis purus, interdum eget gravida a, accumsan eget turpis. Etiam ac bibendum
+                    quam.</p></div>
             </div>
             <div class="col p-1 mt-2">
                 <div class="row fill-c">
                     <img class="course-img" src="/assets/images/cosmetology_adv_course.jpg" alt="">
                 </div>
-                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Advanced issues in cosmetology</h5></a>
+                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Advanced issues in
+                    cosmetology</h5></a>
                 </div>
                 <div class="row"><p>Ester Aston</p></div>
                 <div class="row">
@@ -111,7 +121,9 @@
                         <i class="bi bi-star-fill"></i>
                     </p>
                 </div>
-                <div class="row"><p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque ac ex sed felis venenatis tempus. Fusce a accumsan nisi, at viverra enim.</p></div>
+                <div class="row"><p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                    curae; Pellentesque ac ex sed felis venenatis tempus. Fusce a accumsan nisi, at viverra enim.</p>
+                </div>
             </div>
             <div class="col p-1 mt-2">
                 <div class="row fill-c">
@@ -135,7 +147,8 @@
                 <div class="row fill-c">
                     <img class="course-img" src="/assets/images/color_matching_course.jpg" alt="">
                 </div>
-                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Skin color matching course</h5></a>
+                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Skin color matching
+                    course</h5></a>
                 </div>
                 <div class="row"><p>Petru Akers</p></div>
                 <div class="row">
@@ -147,13 +160,15 @@
                         <i class="bi bi-star-fill"></i>
                     </p>
                 </div>
-                <div class="row"><p>Nam faucibus leo placerat erat porta, in luctus ex pretium. Nam placerat sollicitudin ligula sed laoreet. </p></div>
+                <div class="row"><p>Nam faucibus leo placerat erat porta, in luctus ex pretium. Nam placerat
+                    sollicitudin ligula sed laoreet. </p></div>
             </div>
             <div class="col p-1 mt-2">
                 <div class="row fill-c">
                     <img class="course-img" src="/assets/images/breathing_course.jpg" alt="">
                 </div>
-                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">The effect of breathing on the appearance of the body</h5></a>
+                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">The effect of breathing on the
+                    appearance of the body</h5></a>
                 </div>
                 <div class="row"><p>Yeva Perrault</p></div>
                 <div class="row">
@@ -165,13 +180,15 @@
                         <i class="bi bi-star-half"></i>
                     </p>
                 </div>
-                <div class="row"><p>Aliquam elementum lectus arcu, dictum elementum orci ornare eget. Cras neque ante, vehicula eget turpis in, pulvinar malesuada dui.</p></div>
+                <div class="row"><p>Aliquam elementum lectus arcu, dictum elementum orci ornare eget. Cras neque ante,
+                    vehicula eget turpis in, pulvinar malesuada dui.</p></div>
             </div>
             <div class="col p-1 mt-2">
                 <div class="row fill-c">
                     <img class="course-img" src="/assets/images/hair_dye_course.jpg" alt="">
                 </div>
-                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">How best to mix hair dye</h5></a>
+                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">How best to mix hair dye</h5>
+                </a>
                 </div>
                 <div class="row"><p>Nikol Sigurdsson</p></div>
                 <div class="row">
@@ -183,7 +200,8 @@
                         <i class="bi bi-star-half"></i>
                     </p>
                 </div>
-                <div class="row"><p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed efficitur auctor risus nec posuere.</p></div>
+                <div class="row"><p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                    mus. Sed efficitur auctor risus nec posuere.</p></div>
             </div>
             <div class="col p-1 mt-2 ">
                 <div class="row fill-c">
@@ -201,13 +219,15 @@
                         <i class="bi bi-star-half"></i>
                     </p>
                 </div>
-                <div class="row"><p>Etiam in massa non tortor euismod ultricies eu non odio. Aliquam vel blandit nisi.</p></div>
+                <div class="row"><p>Etiam in massa non tortor euismod ultricies eu non odio. Aliquam vel blandit
+                    nisi.</p></div>
             </div>
             <div class="col p-1 mt-2 d-block">
                 <div class="row fill-c">
                     <img class="course-img" src="/assets/images/henna_course.jpg" alt="">
                 </div>
-                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Henna hair for advanced</h5></a>
+                <div class="row mt-2"><a href="#" class="link text-dark"><h5 class="bold">Henna hair for advanced</h5>
+                </a>
                 </div>
                 <div class="row"><p>Yvan Van Kann</p></div>
                 <div class="row">

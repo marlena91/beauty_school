@@ -66,6 +66,12 @@ h1 {
     background-color: #F9F1F0;
 }
 
+.login {
+    border-color: #F8AFA6;
+    border-style: dotted;
+    width: 500px;
+}
+
 .link {
     text-decoration: none;
 }

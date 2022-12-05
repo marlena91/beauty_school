@@ -30,13 +30,14 @@
         </div>
         <div class="row">
             <div class="col">
-                <form action="/login" method="post">
+                <form th:action="@{/login}" method="post">
                     <div class="row m-3">
                         <div class="col text-center">
                             <li class="alert alert-danger" role="alert" th:if="${!#strings.isEmpty(errorMessage)}"
                                 th:text="${errorMessage}"/>
                             <input type="text" name="username" id="username" placeholder="Username"/>
                             <input type="password" name="password" id="password" placeholder="Password"/>
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
                         </div>
                     </div>
                     <div class="row m-3 justify-content-center">

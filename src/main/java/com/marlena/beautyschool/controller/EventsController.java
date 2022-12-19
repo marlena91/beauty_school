@@ -1,6 +1,8 @@
 package com.marlena.beautyschool.controller;
 
 import com.marlena.beautyschool.model.Event;
+import com.marlena.beautyschool.repository.EventRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +16,9 @@ import java.util.stream.Collectors;
 @Controller
 public class EventsController {
 
+    @Autowired
+    private EventRepository eventRepository;
+
     @GetMapping("/events/{display}")
     public String displayEvents(@PathVariable String display, Model model) {
 
@@ -25,20 +30,7 @@ public class EventsController {
         } else if (null != display && display.equals("online")) {
             model.addAttribute("online", true);
         }
-        List<Event> events = Arrays.asList(
-                new Event(" 26 November ", "Meeting with the make-up artist, Hamburg", Event.Type.LOCAL),
-                new Event(" 27 November ", "10 questions to... monthly meeting with professionals", Event.Type.ONLINE),
-                new Event(" 30 November ", "How to make money in cosmetology", Event.Type.ONLINE),
-                new Event(" 02 December ", "How to choose hair dye, sponsored by Loreal", Event.Type.ONLINE),
-                new Event(" 02 December ", "Marco Lavazza in Paris", Event.Type.LOCAL),
-                new Event(" 03 December ", "First Saturday of the month with Dr. Bevola", Event.Type.ONLINE),
-                new Event(" 04 December ", "What's in Milan, cosmetic novelties", Event.Type.ONLINE),
-                new Event(" 08 December ", "Discover a new body rejuvenating treatment", Event.Type.ONLINE),
-                new Event(" 09 December ", "Fan meeting with Bruno Banani", Event.Type.LOCAL),
-                new Event(" 10 December ", "The final of the competition for our students", Event.Type.ONLINE),
-                new Event(" 14 January ", "Grand sponsors' carnival ball, Spain, Malaga", Event.Type.LOCAL),
-                new Event(" 15 January ", "Grand sponsors' carnival ball, United States, Las Vegas", Event.Type.LOCAL)
-        );
+        List<Event> events = eventRepository.findAllEvents();
 
         Event.Type[] types = Event.Type.values();
         for (Event.Type type : types) {

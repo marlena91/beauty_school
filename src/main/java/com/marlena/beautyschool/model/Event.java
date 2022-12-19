@@ -3,11 +3,11 @@ package com.marlena.beautyschool.model;
 import lombok.Data;
 
 @Data
-public class Event {
+public class Event extends BaseEntity {
 
-    private final String date;
-    private final String name;
-    private final Type type;
+    private String date;
+    private String name;
+    private Type type;
 
     public enum Type {
         LOCAL, ONLINE;

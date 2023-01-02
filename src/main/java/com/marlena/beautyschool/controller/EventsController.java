@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Controller
 public class EventsController {
@@ -30,12 +31,13 @@ public class EventsController {
         } else if (null != display && display.equals("online")) {
             model.addAttribute("online", true);
         }
-        List<Event> events = eventRepository.findAllEvents();
-
+        Iterable<Event> events = eventRepository.findAll();
+        List<Event> eventList = StreamSupport.stream(events.spliterator(), false)
+                .collect(Collectors.toList());
         Event.Type[] types = Event.Type.values();
         for (Event.Type type : types) {
             model.addAttribute(type.toString(),
-                    (events.stream().filter(event -> event.getType().equals(type)).collect(Collectors.toList())));
+                    (eventList.stream().filter(event -> event.getType().equals(type)).collect(Collectors.toList())));
         }
         return "events.html";
 

@@ -7,4 +7,6 @@ import com.marlena.beautyschool.model.Person;
 
 @Repository
 public interface PersonRepository extends CrudRepository<Person, Long> {
+
+    Person readByEmail(String email);
 }

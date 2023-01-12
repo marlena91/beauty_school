@@ -34,6 +34,11 @@ public class PublicController {
         if(errors.hasErrors()){
             return "register.html";
         }
-        return "redirect:/login?register=true";
+        boolean isSaved = personService.createNewPerson(person);
+        if(isSaved){
+            return "redirect:/login?register=true";
+        } else {
+            return "register.html";
+        }
     }
 }

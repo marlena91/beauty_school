@@ -51,6 +51,20 @@
                 </h2>
             </a>
         </div>
+        <div class="col-6 text-center p-3" sec:authorize="hasRole('ROLE_ADMIN')">
+            <a class="link coral" th:href="@{/admin/displayClasses}">
+                <h2>
+                    <i class="bi bi-envelope"></i> Classes <i class="bi bi-envelope"></i>
+                </h2>
+            </a>
+        </div>
+        <div class="col-6 text-center p-3" sec:authorize="hasRole('ROLE_ADMIN')">
+            <a class="link coral" th:href="@{/admin/displayCourses}">
+                <h2>
+                    <i class="bi bi-envelope"></i> Courses  <i class="bi bi-envelope"></i>
+                </h2>
+            </a>
+        </div>
     </div>
 </div>
 

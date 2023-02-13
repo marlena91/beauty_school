@@ -20,6 +20,7 @@ public class ProjectSecurityConfig {
                 .mvcMatchers("/updateProfile").authenticated()
                 .mvcMatchers("/displayMessages").hasRole("ADMIN")
                 .mvcMatchers("/closeMsg/**").hasRole("ADMIN")
+                .mvcMatchers("/admin/**").hasRole("ADMIN")
                 .mvcMatchers("/home").permitAll()
                 .mvcMatchers("/holidays/**").permitAll()
                 .mvcMatchers("/contact").permitAll()

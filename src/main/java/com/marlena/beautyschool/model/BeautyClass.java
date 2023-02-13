@@ -1,6 +1,8 @@
 package com.marlena.beautyschool.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -9,11 +11,12 @@ import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name="class")
 public class BeautyClass extends BaseEntity {
 
-@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name="native", strategy = "native")
     private int classId;

@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Optional;
 
@@ -55,8 +56,36 @@ public class AdminController {
     }
 
     @GetMapping("/displayStudents")
-    public ModelAndView displayStudents(Model model, @RequestParam int classId) {
+    public ModelAndView displayStudents(Model model, @RequestParam int classId, HttpSession httpSession,
+                                        @RequestParam(value="error", required = false) String error) {
+        String errorMessage = null;
         ModelAndView modelAndView = new ModelAndView("students.html");
+        Optional<BeautyClass> beautyClass = beautyClassRepository.findById(classId);
+        modelAndView.addObject("beautyClass", beautyClass.get());
+        modelAndView.addObject("person", new Person());
+        httpSession.setAttribute("beautyClass", beautyClass.get());
+        if(error != null) {
+            errorMessage = "Invalid Email entered!";
+            modelAndView.addObject("errorMessage", errorMessage);
+        }
+        return modelAndView;
+    }
+
+    @PostMapping("/addStudent")
+    public ModelAndView addStudent(Model model, @ModelAttribute("person") Person person, HttpSession httpSession) {
+        ModelAndView modelAndView = new ModelAndView();
+        BeautyClass beautyClass = (BeautyClass) httpSession.getAttribute("beautyClass");
+        Person personEntity = personRepository.readByEmail(person.getEmail());
+        if(personEntity==null || !(personEntity.getPersonId()>0)){
+            modelAndView.setViewName("redirect:/admin/displayStudents?classId="+beautyClass.getClassId()
+            +"&error=true");
+            return modelAndView;
+        }
+        personEntity.setBeautyClass(beautyClass);
+        personRepository.save(personEntity);
+        beautyClass.getPersons().add(personEntity);
+        beautyClassRepository.save(beautyClass);
+        modelAndView.setViewName("redirect:/admin/displayStudents?classId="+beautyClass.getClassId());
         return modelAndView;
     }
 

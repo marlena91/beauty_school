@@ -41,7 +41,7 @@
                         <span aria-hidden="true">x</span>
                     </button>
                 </div>
-                <form th:action="@{admin/addNewClass}" method="post" th:object="${beautyClass}">
+                <form th:action="@{addNewClass}" method="post" th:object="${beautyClass}">
                     <div class="modal-body">
                         <div class="row m-3">
                             <div class="col text-center">
@@ -69,11 +69,11 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="bc: ${beautyClass}">
+            <tr th:each="bc: ${beautyClasses}">
                 <td th:text="${bc.classId}"></td>
                 <td th:text="${bc.name}"></td>
                 <td><a th:href="@{/admin/displayStudents(classId=${bc.classId})}" class="link coral">VIEW</a></td>
-                <td><a th:href="@{/admin/deleteClass(classId=${bc.classId})}" class="link coral">DELETE</a></td>
+                <td><a th:href="@{/admin/deleteClass(id=${bc.classId})}" class="link coral">DELETE</a></td>
             </tr>
             </tbody>
         </table>

@@ -12,6 +12,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -73,4 +75,12 @@ public class Person extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY,optional = true)
     @JoinColumn(name="class_id", referencedColumnName = "classId", nullable = true)
     private BeautyClass beautyClass;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+            @JoinTable(name="person_course",
+            joinColumns = {
+                    @JoinColumn(name="person_id", referencedColumnName = "personId")},
+            inverseJoinColumns = {
+                    @JoinColumn(name = "course_id", referencedColumnName = "courseId")})
+    private Set<Course> courses = new HashSet<>();
 }
